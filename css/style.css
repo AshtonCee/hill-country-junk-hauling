@@ -159,7 +159,7 @@ img {
 }
 
 .nav-logo img {
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -638,17 +638,20 @@ footer {
         width: 100%;
         position: absolute;
         top: 80px;
-        left: -100%;
+        left: 0;
+        transform-origin: top;
+        transform: scaleY(0);
         opacity: 0;
-        transition: all var(--transition-fast);
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         background: var(--clr-white);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav-menu.active {
-        left: 0;
+        transform: scaleY(1);
         opacity: 1;
-        transition: all var(--transition-fast);
+        visibility: visible;
         z-index: 998;
     }
 
